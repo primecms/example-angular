@@ -1,29 +1,37 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
-
-import { Post, AllPostsGQL } from './generated/graphql';
+import { AllBlogGQL, BlogConnectionEdge } from './generated/graphql';
 
 @Component({
   selector: 'app-list',
   template: `
-    <ul>
-      <li *ngFor="let post of posts | async">
-        {{post.title}} by {{post.author.firstName}} {{post.author.lastName}}
-        ({{post.votes}} votes)
-        <app-upvoter [postId]="post.id"></app-upvoter>
-      </li>
-    </ul>
+    <h1>Blog posts</h1>
+    <div *ngIf="loading">
+      Loading...
+    </div>
+    <div *ngFor="let edge of allBlogEdges">
+      <time dateTime="{{edge.node._meta.updatedAt}}">{{edge.node._meta.updatedAt | dfnsFormat: 'YYYY/MM/DD'}}</time>
+      <h3>{{edge.node.title}}</h3>
+    </div>
   `,
 })
 export class ListComponent implements OnInit {
-  posts: Observable<Post[]>;
 
-  constructor(private allPostsGQL: AllPostsGQL) {}
+  loading = true;
+  error: any;
+
+  allBlogEdges: BlogConnectionEdge[];
+
+  constructor(private allPostsGQL: AllBlogGQL) {}
 
   ngOnInit() {
-    this.posts = this.allPostsGQL
-      .watch()
-      .valueChanges.pipe(map(result => result.data.posts));
+    this.allPostsGQL.watch()
+    .valueChanges.subscribe((result) => {
+      if (result.errors) {
+        this.error = result.errors[0];
+      } else {
+        this.allBlogEdges = result.data.allBlog.edges;
+      }
+      this.loading = false;
+    });
   }
 }

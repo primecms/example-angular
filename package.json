@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "graphql": "gql-gen --schema https://simple-posts-authors-graphql.glitch.me --template graphql-codegen-apollo-angular-template --out src/app/generated/graphql.ts src/app/graphql/*.graphql"
+    "graphql": "gql-gen --schema https://example-prime.herokuapp.com/graphql --template graphql-codegen-apollo-angular-template --out src/app/generated/graphql.ts src/app/graphql/*.graphql"
   },
   "private": true,
   "dependencies": {
@@ -27,8 +27,10 @@
     "apollo-client": "2.4.1",
     "apollo-link": "1.2.2",
     "core-js": "2.5.7",
+    "date-fns": "1.30.1",
     "graphql": "0.13.2",
     "graphql-tag": "2.9.2",
+    "ngx-date-fns": "4.0.2",
     "rxjs": "6.3.1",
     "zone.js": "0.8.26"
   },

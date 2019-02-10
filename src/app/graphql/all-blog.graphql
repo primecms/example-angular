@@ -1,0 +1,14 @@
+query allBlog {
+  allBlog {
+    edges {
+      node {
+        _meta {
+          updatedAt
+        }
+        id
+        title
+        body
+      }
+    }
+  }
+}

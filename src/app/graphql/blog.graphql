@@ -1,0 +1,10 @@
+query Blog($id: ID!) {
+  Blog(id: $id) {
+    _meta {
+      updatedAt
+    }
+    id
+    title
+    body
+  }
+}

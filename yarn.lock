@@ -1808,6 +1808,11 @@ dashdash@^1.12.0:
   dependencies:
     assert-plus "^1.0.0"
 
+date-fns@1.30.1:
+  version "1.30.1"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-1.30.1.tgz#2e71bf0b119153dbb4cc4e88d9ea5acfb50dc05c"
+  integrity sha512-hBSVCvSmWC+QypYObzwGOd9wqdDpOt+0wl0KbU+R+uuZBS1jN8VsD1ss3irQDknRj5NvxiTF6oj/nDRnN/UQNw==
+
 date-now@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/date-now/-/date-now-0.1.4.tgz#eaf439fd4d4848ad74e5cc7dbef200672b9e345b"
@@ -2847,9 +2852,10 @@ graphql-anywhere@^4.1.18:
   dependencies:
     apollo-utilities "^1.0.20"
 
-graphql-code-generator@^0.12.0-alpha.576bcbfb:
+graphql-code-generator@0.12.0-alpha.576bcbfb:
   version "0.12.0-alpha.576bcbfb"
   resolved "https://registry.yarnpkg.com/graphql-code-generator/-/graphql-code-generator-0.12.0-alpha.576bcbfb.tgz#40adba0a8608d6b7c7a4faea355d0642577226f4"
+  integrity sha512-Z+3J7L/6kPqfuqAv3hDojyhre7NN0UIGypV9W46uKdrEAZg6t5ReG64A3+0I3ScXRt2QMAJs1E8EWDk6F4juDw==
   dependencies:
     "@types/babylon" "6.16.3"
     "@types/is-glob" "4.0.0"
@@ -2871,9 +2877,10 @@ graphql-code-generator@^0.12.0-alpha.576bcbfb:
     request "2.88.0"
     valid-url "1.0.9"
 
-graphql-codegen-apollo-angular-template@^0.12.0-alpha.576bcbfb:
+graphql-codegen-apollo-angular-template@0.12.0-alpha.576bcbfb:
   version "0.12.0-alpha.576bcbfb"
   resolved "https://registry.yarnpkg.com/graphql-codegen-apollo-angular-template/-/graphql-codegen-apollo-angular-template-0.12.0-alpha.576bcbfb.tgz#e3cd1c92f0e6ad57293986aab89d9c5303cabfc8"
+  integrity sha512-AJok8tEELFcxuBkr6gDI0s2rC/8Ncy8Er19n4nIY90VCcWU1iN01CnOX726Wd6xHV6tYTgwm5bg8hatg0/bfiA==
   dependencies:
     graphql-codegen-typescript-template "0.12.0-alpha.576bcbfb"
 
@@ -4378,6 +4385,13 @@ negotiator@0.6.1:
 neo-async@^2.5.0:
   version "2.5.2"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.5.2.tgz#489105ce7bc54e709d736b195f82135048c50fcc"
+
+ngx-date-fns@4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/ngx-date-fns/-/ngx-date-fns-4.0.2.tgz#41865bf1d602a3a7ebab4d8a3b71146d885701ae"
+  integrity sha512-zrCom3ZU7B+yPfcycEs9+b4r7GGgv4Z/R+Kamcasv0NOlnjpMl31XJ3r15tvAbHJkqO8GPien0frTrG9YYN+bg==
+  dependencies:
+    tslib "^1.9.0"
 
 nice-try@^1.0.4:
   version "1.0.5"
